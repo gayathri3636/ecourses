@@ -7,11 +7,12 @@ import ForgotPassword from './Components/ForgotPassword';
 import AddCourse from './Components/AddCourse';
 import Catalog from './Components/catalog';
 import Contact from './Components/Contact'
-
+import Home from "./Components/Home"
 export default function Routes() {
     return (
         <Router>
             <Header/>
+            <Route exact path = "/" component = {Home} />
             <Route exact path = "/login" component = {Login} />
             <Route exact path = "/register" component = {Register} />
             <Route exact path = "/forgotpassword" component = {ForgotPassword} />            

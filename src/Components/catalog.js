@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from "react";
-import { Card, Row, Col, Layout } from "antd";
+import { Card, Layout } from "antd";
 import {Link} from 'react-router-dom';
 import "antd/dist/antd.css";
 import "./catalog.css";
@@ -8,8 +8,6 @@ const { Content, Footer, Sider } = Layout;
 
 export default function Catalog(props) {
   const [courses, addCourses] = useState([])
-  // const [error, seterror] = useState("")
-
   useEffect (() =>{
     const Formbody = {
       query: `query{
@@ -38,27 +36,20 @@ export default function Catalog(props) {
         <SideBar />
       </Sider>
       <Layout>
-        <Content style={{ margin: "24px 16px 0 " }}>
+        <Content style={{ margin: "24px 16px 0 ", display:"flex" }}>
           <div className="site-card-wrapper">
-            <Row gutter={16}>
-              <Col span={8}>
 
                 {
                 courses.length  !== "undefined"? courses.map(item =>  <Card
                   title={item.courseName}
-                  style={{
-                    backgroundColor: "#B5E7A0",
-                  }}
+                  className="cardd"
                   bordered={false}
                 >
-                  <h6>{item.description}</h6>
-                  <Link to = "/html">HTML</Link>
+                  <h3>{item.description}</h3>
+                  <Link className ="link" to = "/html">Click</Link>
                 
                 </Card>): null
                          }
-               
-              </Col>
-            </Row>
           </div>
         </Content>
 
