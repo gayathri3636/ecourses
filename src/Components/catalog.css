@@ -2,5 +2,24 @@
     padding: 50px;
     background: #ececec;
     padding: 24;
-    min-height: 360;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .cardd{
+position: relative;
+    background-color: #F0A7A0;
+  box-sizing: border-box;
+  padding: 20px;
+  min-width: 200px;
+  max-height: 200px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  flex: 1px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .link{
+    color: blue;
   }
