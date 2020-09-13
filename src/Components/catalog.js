@@ -2,7 +2,7 @@ import React,{useEffect, useState} from "react";
 import { Card, Layout } from "antd";
 import {Link} from 'react-router-dom';
 import "antd/dist/antd.css";
-import "./catalog.css";
+import "./catalog.scss";
 import SideBar from "./SideBar";
 const { Content, Footer, Sider } = Layout;
 

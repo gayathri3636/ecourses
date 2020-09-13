@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom';
 import {Form, Input, Button, Checkbox} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
-import './Login.css';
+import './Login.scss';
 
 export default function Login(props) {
   const [logins, setLogins] = useState({

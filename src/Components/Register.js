@@ -7,7 +7,7 @@ import {
   ContactsOutlined,
 } from "@ant-design/icons";
 import "antd/dist/antd.css";
-import "./Register.css";
+import "./Register.scss";
 
 export default function RegisterScreen() {
   const [registers, setRegisters] = useState({
