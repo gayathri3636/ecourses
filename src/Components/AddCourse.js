@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './AddCourse.css';
+import './AddCourse.scss';
 
 export default function AddCourse(props) {
   const [details, setdetails] = useState({

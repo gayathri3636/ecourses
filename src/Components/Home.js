@@ -1,6 +1,6 @@
 import React from "react";
 import display from "../images/learn.jpg";
-import "./Home.css";
+import "./Home.scss";
 export default function Home() {
   return (
     <div className="Home">

@@ -2,7 +2,7 @@ import React from 'react';
 import 'antd/dist/antd.css';
 import billgates from '../images/bill-gates.jpg';
 import jeff from '../images/jeff.jpg'
-import './Contact.css';
+import './Contact.scss';
 import { Card } from 'antd';
 
 const { Meta } = Card;
