@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './AddCourse.css';
 
 export default function AddCourse(props) {
   const [details, setdetails] = useState({
@@ -35,13 +36,12 @@ export default function AddCourse(props) {
 
 
   return (
-    <div className="displayBlock">
-      <div className="formLayout">
+    <div className="display">
+      <div className="form">
         <form>
-          <h3>Add Course</h3>
-          <p>Let us the know the course details</p>
+          <h3 className = "heading">Add Course</h3>
           <label className="displayLable">
-            <span className="spanWidth"> course</span>
+            <span className="spanWidth"> courseName:</span>
             <input
               className="displayInput"
               type="text"
@@ -52,9 +52,9 @@ export default function AddCourse(props) {
               }
             />
           </label>
-
+<br />
           <label className="displayLable">
-            <span className="spanWidth"> desc</span>
+            <span className="spanWidth"> Description:</span>
             <input
               className="displayInput"
               type="text"
@@ -65,9 +65,9 @@ export default function AddCourse(props) {
               }
             />
           </label>
-
-          <button onClick={handleSubmit} className="button">
-            submit
+<br />
+          <button onClick={handleSubmit}  className="button">
+            Add Course
           </button>
           <div className="buttonRight"></div>
         </form>

@@ -1,0 +1,26 @@
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: salmon;
+    overflow: hidden;
+}
+.login{
+    text-align: right;
+    margin-right: 10px;
+    font-size: 20px;
+    font-family: cursive;
+}
+.course{
+    text-align: left;
+    margin-left: 30px;
+    font-size: 20px;
+}
+.addcourse{
+    margin-right: 15px;
+}
+.catalog{
+    margin-right: 15px;
+}
+.contact{
+    margin-left: 50px;
+}
