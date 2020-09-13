@@ -5,7 +5,7 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 import ForgotPassword from './Components/ForgotPassword';
 import AddCourse from './Components/AddCourse';
-import SideBar from './Components/SideBar';
+import Catalog from './Components/catalog';
 
 export default function Routes() {
     return (
@@ -13,9 +13,8 @@ export default function Routes() {
             <Header/>
             <Route exact path = "/login" component = {Login} />
             <Route exact path = "/register" component = {Register} />
-            <Route exact path = "/forgotpassword" component = {ForgotPassword} />
-            <Route exact path = "/Sidebar" component = {SideBar} />
-            <Route exact path = "/Addcourse" component = {AddCourse} />
+            <Route exact path = "/forgotpassword" component = {ForgotPassword} />            <Route exact path = "/Addcourse" component = {AddCourse} />
+            <Route exact path = "/catalog" component = {Catalog}/>
         </Router>
     )
 }

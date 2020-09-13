@@ -1,9 +1,38 @@
 import React, { useState } from "react";
 
 export default function AddCourse(props) {
-    const handleSubmit = () => {
-        props.history.push("/Sidebar")
+  const [details, setdetails] = useState({
+    courseName:"",
+    description:""
+  })
+    const handleSubmit = async(e) => {
+      e.preventDefault();
+      console.log("details", details)
+      const body = {
+        query: `mutation{
+          addCourse(course:{courseName:"${details.courseName}" , description:"${details.description}"}){
+            courseName
+            description
+          }
+        }`,
+      };
+  
+      console.log("det", body.toString());
+  
+      try {
+        const data = await fetch("http://localhost:5000/api/", {
+          method: "POST",
+          body: JSON.stringify(body),
+          headers: { "Content-Type": "application/json" },
+        });
+        console.log("data", data);
+      } catch (error) {
+        console.log(error);
+      }
+        props.history.push("/catalog")
     }
+
+
 
   return (
     <div className="displayBlock">
@@ -18,9 +47,9 @@ export default function AddCourse(props) {
               type="text"
               id="courseName"
               name="courseName"
-            //   onChange={(e) =>
-            //     setdetails({ ...details, courseName: e.target.value })
-            //   }
+              onChange={(e) =>
+                setdetails({ ...details, courseName: e.target.value })
+              }
             />
           </label>
 
@@ -31,9 +60,9 @@ export default function AddCourse(props) {
               type="text"
               id="description"
               name="description"
-            //   onChange={(e) =>
-            //     setdetails({ ...details, description: e.target.value })
-            //   }
+              onChange={(e) =>
+                setdetails({ ...details, description: e.target.value })
+              }
             />
           </label>
 

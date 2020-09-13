@@ -1,17 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
 // import "./index.css";
-import { Layout, Menu, Breadcrumb } from "antd";
-import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
+import { Layout, Menu} from "antd";
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Content,  Sider } = Layout;
 const { SubMenu } = Menu;
 
 class SiderDemo extends React.Component {
@@ -34,12 +26,12 @@ class SiderDemo extends React.Component {
         >
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-            <SubMenu key="sub1" icon={<UserOutlined />} title="Languages">
+            <SubMenu key="sub1"  title="Languages">
               <Menu.Item key="3">HTML</Menu.Item>
               <Menu.Item key="4">CSS</Menu.Item>
               <Menu.Item key="5">JAVASCRIPT</Menu.Item>
             </SubMenu>
-            <SubMenu key="sub2" icon={<TeamOutlined />} title="Courses">
+            <SubMenu key="sub2"  title="Courses">
               <Menu.Item key="6">Web development</Menu.Item>
               <Menu.Item key="8">Embedded</Menu.Item>
             </SubMenu>
