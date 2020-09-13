@@ -1,0 +1,7 @@
+.site-card-wrapper {
+    padding: 50px;
+    background: #ececec;
+    /* flex-direction: column; */
+    padding: 24;
+    min-height: 360;
+  }

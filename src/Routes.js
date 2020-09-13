@@ -13,7 +13,8 @@ export default function Routes() {
             <Header/>
             <Route exact path = "/login" component = {Login} />
             <Route exact path = "/register" component = {Register} />
-            <Route exact path = "/forgotpassword" component = {ForgotPassword} />            <Route exact path = "/Addcourse" component = {AddCourse} />
+            <Route exact path = "/forgotpassword" component = {ForgotPassword} />            
+            <Route exact path = "/Addcourse" component = {AddCourse} />
             <Route exact path = "/catalog" component = {Catalog}/>
             <Route exact path = "/html" component = {Catalog}/>
         </Router>

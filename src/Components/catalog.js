@@ -2,7 +2,7 @@ import React,{useEffect, useState} from "react";
 import { Card, Row, Col, Layout } from "antd";
 import {Link} from 'react-router-dom';
 import "antd/dist/antd.css";
-// import "./catalog.css";
+import "./catalog.css";
 import SideBar from "./SideBar";
 const { Content, Footer, Sider } = Layout;
 
@@ -41,7 +41,7 @@ export default function Catalog(props) {
         <Content style={{ margin: "24px 16px 0 " }}>
           <div className="site-card-wrapper">
             <Row gutter={16}>
-              <Col span={6}>
+              <Col span={8}>
 
                 {
                 courses.length  !== "undefined"? courses.map(item =>  <Card
