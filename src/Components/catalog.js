@@ -8,7 +8,7 @@ const { Content, Footer, Sider } = Layout;
 
 export default function Catalog(props) {
   const [courses, addCourses] = useState([])
-  const [error, seterror] = useState("")
+  // const [error, seterror] = useState("")
 
   useEffect (() =>{
     const Formbody = {
@@ -27,7 +27,7 @@ export default function Catalog(props) {
       })
         .then((resdata) => resdata.json())
         .then((da) => addCourses(da.data?.allCourses))
-        .catch((error) => seterror(error));
+        .catch((error) => console.log(error));
     };
     handleFetch();
   });

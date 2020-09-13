@@ -6,6 +6,7 @@ import Register from './Components/Register';
 import ForgotPassword from './Components/ForgotPassword';
 import AddCourse from './Components/AddCourse';
 import Catalog from './Components/catalog';
+import Contact from './Components/Contact'
 
 export default function Routes() {
     return (
@@ -17,6 +18,8 @@ export default function Routes() {
             <Route exact path = "/Addcourse" component = {AddCourse} />
             <Route exact path = "/catalog" component = {Catalog}/>
             <Route exact path = "/html" component = {Catalog}/>
+            <Route exact path = "/contact" component = {Contact}/>
+
         </Router>
     )
 }
