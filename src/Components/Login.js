@@ -35,8 +35,8 @@ export default function Login(props) {
                         <Input
                         prefix={<UserOutlined className = "site-form-item-icon" />}
                         placeholder = "Username"
-                        // value={logins.email}
-                        // onChange = {(value) => ({...logins, email: value.target.value})}
+                        value={logins.email}
+                        onChange = {(value) => setLogins({...logins, email: value.target.value})}
                         />
                     </Form.Item>
                     <Form.Item
@@ -52,11 +52,10 @@ export default function Login(props) {
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
               placeholder="Password"
-              // value={logins.password}
-              // onChange={(value) => ({
-              //   ...logins,
-              //   password: value.target.value,
-              // })}
+              value={logins.password}
+              onChange={(value) =>
+                setLogins({ ...logins, password: value.target.value })
+              }
             />
           </Form.Item>
 
