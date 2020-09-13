@@ -1,0 +1,10 @@
+.register-form {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .hregister {
+    text-align: center;
+    margin-top: 50px;
+  }
+  

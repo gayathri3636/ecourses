@@ -2,8 +2,16 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom';
 import {Form, Input, Button, Checkbox} from 'antd';
 import {UserOutlined, LockOutlined} from '@ant-design/icons';
+import './Login.css';
 
 export default function Login(props) {
+  const [logins, setLogins] = useState({
+    email: "",
+    password: "",
+  });
+  const onFinish = (value) => {
+    console.log("Received values of form: ", logins);
+  };
     return (
         <>
             <h1 className = "hlogin">Login</h1>
@@ -28,6 +36,7 @@ export default function Login(props) {
                         prefix={<UserOutlined className = "site-form-item-icon" />}
                         placeholder = "Username"
                         // value={logins.email}
+                        // onChange = {(value) => ({...logins, email: value.target.value})}
                         />
                     </Form.Item>
                     <Form.Item
@@ -43,11 +52,11 @@ export default function Login(props) {
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
               placeholder="Password"
-            //   value={logins.password}
-            //   onChange={(value) => ({
-            //     ...logins,
-            //     password: value.target.value,
-            //   })}
+              // value={logins.password}
+              // onChange={(value) => ({
+              //   ...logins,
+              //   password: value.target.value,
+              // })}
             />
           </Form.Item>
 
@@ -64,6 +73,7 @@ export default function Login(props) {
               type="primary"
               htmlType="submit"
               className="login-form-button"
+              onClick = {onFinish}
             >
               Log in
             </Button>
