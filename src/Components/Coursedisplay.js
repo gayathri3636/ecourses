@@ -1,6 +1,5 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 import { Card, Layout, Row, Col } from "antd";
-import {Link} from 'react-router-dom';
 import "antd/dist/antd.css";
 import "./CourseDisplay.scss";
 import html from '../images/html.png'
