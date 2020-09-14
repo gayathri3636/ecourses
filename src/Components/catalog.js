@@ -7,6 +7,10 @@ import SideBar from "./SideBar";
 const { Content, Footer, Sider } = Layout;
 
 export default function Catalog(props) {
+  const handleClick = (e) => {
+    e.preventDefault();
+    props.history.push("/coursedisplay")
+  }
   const [courses, addCourses] = useState([])
   useEffect (() =>{
     const Formbody = {
@@ -46,7 +50,7 @@ export default function Catalog(props) {
                   bordered={false}
                 >
                   <h3>{item.description}</h3>
-                  <Link className ="link" to = "/html">Click</Link>
+                  <Link onClick = {handleClick} className ="link" to = "/coursedisplay">Click</Link>
                 
                 </Card>): null
                          }
