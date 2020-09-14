@@ -7,7 +7,10 @@ import ForgotPassword from './Components/ForgotPassword';
 import AddCourse from './Components/AddCourse';
 import Catalog from './Components/catalog';
 import Contact from './Components/Contact'
-import Home from "./Components/Home"
+import Home from "./Components/Home";
+import CourseDisplay from './Components/Coursedisplay';
+import CssCourseDisplay from './Components/CssCoursedisplay';
+
 export default function Routes() {
     return (
         <Router>
@@ -20,7 +23,8 @@ export default function Routes() {
             <Route exact path = "/catalog" component = {Catalog}/>
             <Route exact path = "/html" component = {Catalog}/>
             <Route exact path = "/contact" component = {Contact}/>
-
+            <Route exact path = "/coursedisplay" component = {CourseDisplay} />
+            <Route exact path = "/coursedisplaycss" component = {CssCourseDisplay} />
         </Router>
     )
 }
