@@ -20,6 +20,9 @@ export default function Header() {
           AddCourse
         </Link>
         <Link to='/catalog'>Catalog</Link>
+        <Link className='addcoursecontent' to='/addcoursecontent'>
+          AddCourseContent
+        </Link>
       </div>
     </div>
   );
