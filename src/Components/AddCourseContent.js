@@ -34,6 +34,7 @@ export default function AddCourseContent(props) {
     <div>
       <input
         type='text'
+        placeholder='Add course title'
         value={coursetitle}
         onChange={(e) => SetCourseTitle(e.target.value)}
       />
